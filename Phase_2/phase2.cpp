@@ -101,7 +101,7 @@ void opsys::Write(char IR[],char MM[][4]){
     if(pcb.llc > pcb.tll){                         
         errmsg(2);
         Terminate();
-        // exit(0);
+
         error=true;
         return;
     }
@@ -130,7 +130,6 @@ void opsys::Read(string data[],char IR[],char MM[][4]){
 
     if(dataline.at(0) == '$'){ 
         errmsg(1);
-        // terminate();
         error = true;
     }
 
@@ -215,17 +214,15 @@ void opsys::MOS(string data[]){
            
             Ic--;
         }
-        else if(function == "PD")                   // invalid page fault
+        else if(function == "PD")                   
         {    
             errmsg(6);
             Terminate();
-            // exit(0);
             error = true;
         }
         else{
             errmsg(4);
             Terminate(); 
-            // exit(0);
             error = true;
         }
     }
@@ -244,7 +241,6 @@ void opsys::MOS(string data[]){
     else if(ti ==2 && pi== 3){
         errmsg(3);
         Terminate(); 
-        // exit(0);
         error = true;
     }
 }
