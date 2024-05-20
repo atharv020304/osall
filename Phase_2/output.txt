@@ -1,0 +1,779 @@
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+Invalid Page Fault
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+
+
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+Invalid Page Fault
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+
+
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+
+
+Invalid Page Fault
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+
+
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+
+
+
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+Hello wordTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+Invalid Page Fault
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+HelloworldTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+
+
+Invalid Page Fault
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+HelloworldNO Error
+si -> 3
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 4
+Ic -> 3
+
+
+
+Opration Code Error
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 0
+Ic -> 1
+
+
+
+Oprand Error
+si -> 3
+ti -> 0
+pi -> 2
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+
+HelloworldTime Limit Exceeded
+si -> 2
+ti -> 2
+pi -> 0
+ttl -> 2
+tll -> 1
+ttc -> 3
+Ic -> 2
+
+
+
+Line Limit Exceeded
+si -> 2
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 0
+ttc -> 3
+Ic -> 2
+
+
+
+Out Of Data
+si -> 1
+ti -> 0
+pi -> 0
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 1
+
+
+Invalid Page Fault
+si -> 3
+ti -> 0
+pi -> 3
+ttl -> 5
+tll -> 1
+ttc -> 2
+Ic -> 2
+
+
+

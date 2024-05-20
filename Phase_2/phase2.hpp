@@ -13,17 +13,17 @@ using namespace std;
 class opsys{
 
     private:
-        char MM[300][4];    //main memory
-        char IR[4];         // instruction register
-        char R[40];         //general purpose register
-        int Ic;             // instruction counter
-        int si;             // system interuppt
-        int ti;             // timer inpeterupt
-        int pi;             //process interuppt 
-        bool C;             // toggle 
-        string buffer;      // buffer
-        int EM;             //error meassage
-        int ptr;           // page table pointer
+        char MM[300][4];    
+        char IR[4];         
+        char R[40];         
+        int Ic;             
+        int si;             
+        int ti;             
+        int pi;             
+        bool C;             
+        string buffer;      
+        int EM;             
+        int ptr;           
         int rd;
         string function;
         int opAdd;
@@ -31,11 +31,11 @@ class opsys{
         class processCB{
 
             public:
-                int pid;    //process id
-                int ttl;    // total time limit
-                int tll;    //total line limit
-                int ttc;    //total time counter
-                int llc;    //line limit counter
+                int pid;    
+                int ttl;    
+                int tll;    
+                int ttc;    
+                int llc;   
         }pcb;
 
     

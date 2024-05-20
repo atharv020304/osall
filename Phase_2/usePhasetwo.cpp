@@ -8,14 +8,14 @@
 
 int main(){
 
-    opsys vos;                 //contructor for class
+    opsys vos;
 
     vos.init();                
-    // vos.displayMemory();        
-
+          
     vos.Load();           
 
     cout<<"\n\n\n***After Execution of Job***\n"<<endl;
+    
     vos.displayMemory();       
    
     return 0;

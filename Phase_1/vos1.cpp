@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include<string.h>
+#include <string.h>
 #include <stdlib.h>
 
 using namespace std;
@@ -74,7 +74,7 @@ int di = 0;
 void Read(string data[],char IR[],char MM[][4]){        
     string dataline = data[di++];
 
-    IR[3] = '0';  //error handling
+    IR[3] = '0'; 
     
     int row = find(IR[2]);
   
@@ -303,7 +303,6 @@ int main(){
 
     vos.init();                 
     vos.displayMemory();
-
     vos.Load();                 
 
     cout<<"\n\n\n***After Execution of Job***\n"<<endl;

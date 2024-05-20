@@ -7,7 +7,7 @@
 #include "phase2.hpp"
 
 
-void opsys::init(){                     //init function
+void opsys::init(){                     
 
     for(int i =0;i<300;i++){
         for(int j=0;j<4;j++){
@@ -61,14 +61,20 @@ void opsys::errmsg(int EM){
             break;
     }
      
-    //  outputFile << error << endl;
-     outputFile <<"si -> " << si << "\t ti-> " << ti << "\t pi-> " << pi << endl;
-     outputFile << "ttl -> " << pcb.ttl << "\ttll -> " << pcb.tll <<"\tttc -> " << pcb.ttc << endl;
-     outputFile << "Ic -> "<< Ic;
+    
+        outputFile <<"si -> "<< si << endl;
+        outputFile <<"ti -> "<< ti << endl;
+        outputFile <<"pi -> "<< pi << endl;
+        outputFile <<"ttl -> "<< pcb.ttl << endl;
+        outputFile <<"tll -> "<< pcb.tll << endl;
+        outputFile <<"ttc -> "<< pcb.ttc << endl;
+        outputFile <<"Ic -> "<< Ic << endl;
+        
+       
 
 }
 
-void Terminate(){                               //function for adding two blank line after execution of one job
+void Terminate(){                              
 
     ofstream outputFile("output.txt",ios::app);
     outputFile<<"\n"<<endl;
@@ -76,7 +82,7 @@ void Terminate(){                               //function for adding two blank 
 
 }
 
-int find(char ch1,char ch2){      //function for return oprand Address
+int find(char ch1,char ch2){     
     
     if(isdigit(ch1) && isdigit(ch2)){
         int tempop = ch1 - 48;
@@ -89,10 +95,10 @@ int find(char ch1,char ch2){      //function for return oprand Address
     }
 }
 
-void opsys::Write(char IR[],char MM[][4]){         //write function
+void opsys::Write(char IR[],char MM[][4]){         
 
-    pcb.llc++;                                     // llc increment
-    if(pcb.llc > pcb.tll){                         // check tll range 
+    pcb.llc++;                                     
+    if(pcb.llc > pcb.tll){                         
         errmsg(2);
         Terminate();
         // exit(0);
@@ -117,23 +123,18 @@ void opsys::Write(char IR[],char MM[][4]){         //write function
 
 int di = 0;
 
-void opsys::Read(string data[],char IR[],char MM[][4]){         //read data from input file and store into memory
+void opsys::Read(string data[],char IR[],char MM[][4]){        
 
-     //datacard missing condition (out of data)
-    // if(data->empty()){
-    //     errmsg(1);
-    //     Terminate();
-    //     // exit(0);
-    // }
+    
     string dataline = data[di++];
 
-    if(dataline.at(0) == '$'){
+    if(dataline.at(0) == '$'){ 
         errmsg(1);
         // terminate();
         error = true;
     }
 
-    IR[3] = '0';  //error handling
+    IR[3] = '0';  
      
     int row = rd;
     int col =0;
@@ -163,14 +164,12 @@ void opsys::MOS(string data[]){
     else if(ti ==2 && si== 1){
         errmsg(3);
         Terminate();
-        // exit(0); 
         error =  true;
     }
     else if(ti == 2 && si== 2){
         Write(IR,MM); 
         errmsg(3);
-        Terminate();
-        // exit(0); 
+        Terminate(); 
         error =  true;
     }
     else if(ti == 2 && si== 3 && pi == 0){
@@ -181,23 +180,19 @@ void opsys::MOS(string data[]){
     else if(ti == 0 && pi == 1){
         errmsg(4);
         Terminate(); 
-        // exit(0);
         error = true;
     }
     else if(ti ==0 && pi== 2){
         errmsg(5);
         Terminate(); 
-        // exit(0);
         error = true;
     }
     else if(ti ==0 && pi== 3){
-        //page fault eror
-        //valid --> allocate memmory and execute user program -->> ic--;
-        //invalid --> terminate and EM = 6 
-        if(function == "GD" || function =="SR"){       //valid page fault
+       
+        if(function == "GD" || function =="SR"){       
             string progce;
             while(true){
-        //random page assigning
+        
             srand(time(0)); 
             int fream_no = rand()%30; 
 
@@ -298,15 +293,15 @@ void opsys::executeuserprogram(string data[]){
 
     si = 3; 
     pi = 0;
-    ti = 0;                        //default si set to 3
+    ti = 0;                        
 
     int ra = addressMap(Ic);
-    if(ra == -1){                   //Invalid page fault
+    if(ra == -1){                   
         Terminate();
         break;
     }
 
-    for (int j = 0; j < 4; j++) {       // load instruction from memory to Instruction Register
+    for (int j = 0; j < 4; j++) {       
         IR[j] = MM[ra][j];
     }
   
@@ -333,7 +328,7 @@ void opsys::executeuserprogram(string data[]){
     }
 
     
-    if(function == "LR"){               //load data from memory to register
+    if(function == "LR"){               
         int r_count =0;
         for(int i =operandAdd;i<=(operandAdd+9);i++){
             for(int j = 0;j<4;j++){
@@ -343,7 +338,7 @@ void opsys::executeuserprogram(string data[]){
        si = 0;
     }
 
-    else if(function == "SR"){          //store data into memory from register
+    else if(function == "SR"){          
 
         int r_count = 0;
         for(int i = operandAdd;i<(operandAdd+9);i++){
@@ -354,7 +349,7 @@ void opsys::executeuserprogram(string data[]){
         si =0;
     }
 
-    else if(function == "CR"){          //compare data of register and perticular memory location
+    else if(function == "CR"){          
         int r_count = 0;
         int flag = 0;
         for(int i=operandAdd;i<(operandAdd+9);i++){
@@ -374,7 +369,7 @@ void opsys::executeuserprogram(string data[]){
         si = 0;
     }
 
-    else if(function == "BT"){              //branch on true it is like jump instrction
+    else if(function == "BT"){              
         if(C == true){
             Ic = operandAdd + (IR[3] - 48);
             C = false;
@@ -385,17 +380,17 @@ void opsys::executeuserprogram(string data[]){
         si = 0;
     }
 
-    else if(function == "GD"){          //get data
+    else if(function == "GD"){          
         si = 1;
         rd = operandAdd;
         pcb.ttc = pcb.ttc+2;
     }
-    else if(function == "PD"){          //put data
+    else if(function == "PD"){          
         si = 2;
         pcb.ttc++;
         rd = operandAdd;
     }
-    else if(IR[0] == 'H'){              //halt
+    else if(IR[0] == 'H'){              
         si = 3;
         pcb.ttc++;
         simulation();
@@ -408,13 +403,13 @@ void opsys::executeuserprogram(string data[]){
     }
 
     simulation();
-    MOS(data);                         //  User Mode ---> kernal Mode
+    MOS(data);                         
     }
 }
 
 void opsys::startexecution(string data[]){
     Ic = 0;
-    executeuserprogram(data);               //function call for executeuserprogram() function
+    executeuserprogram(data);               
 }
 
 bool opsys::isFree(int fream_no){
@@ -436,7 +431,7 @@ bool opsys::isFree(int fream_no){
 }
 
 void opsys::Allocatefream(){
-    int ptsi ;              //page table starting index
+    int ptsi ;              
     while (true)
     {
         srand(time(0)); 
@@ -461,25 +456,25 @@ void opsys::Allocatefream(){
 
 void opsys::Load(){
  
-    //Max buffer size 40
+    
     if(buffer.length() > 40){
         printf("index out of bound!");
         return;
     } 
 
-    string databuffer[4]; //data buffer for storing data
+    string databuffer[4]; 
     int data_count =0;
 
     
-    fin.open("inputx.txt");  //input file open
+    fin.open("inputx.txt");  
  
-    while (getline(fin, buffer)) {      //while loop for reading input file line by line
+    while (getline(fin, buffer)) {      
 
         string opcode = buffer;
         string op = opcode.substr(0,4);
         
         if(op == "$AMJ"){   
-            init();             //memory reset / memory reallocation
+            init();             
             Allocatefream();
             string pid = opcode.substr(4,4);
             string timelimit = opcode.substr(8,4);
@@ -491,7 +486,7 @@ void opsys::Load(){
             pcb.ttc = 0;
             continue;
         }
-        //data card
+        
         else if(op == "$DTA"){
             while(getline(fin, buffer)){
                 if(buffer.substr(0,1) == "$"){
@@ -504,14 +499,14 @@ void opsys::Load(){
                    continue;
                 }
             }
-            startexecution(databuffer);         //call for startexecution
+            startexecution(databuffer);         
         }
 
         else if(op == "$END"){
            break;
         }
 
-         // program card control
+         
         else{     
             string inst = buffer;
             int progei;
@@ -546,7 +541,7 @@ void opsys::Load(){
                 }
             }
             
-            //pagetable update
+            
             string progce = to_string(progei);
             int k =3;
             for(int i=progce.length()-1;i>=0;i--){
@@ -558,10 +553,10 @@ void opsys::Load(){
             } 
         }
     }
-    fin.close();    //after reading all file closing the file
+    fin.close();    
 }
 
-void opsys::displayMemory(){        //function for display memory
+void opsys::displayMemory(){        
 
     printf("\n Main Memory Simulation\n\n");
     for(int i =0;i<300;i++){
