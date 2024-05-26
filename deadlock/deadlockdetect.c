@@ -16,6 +16,7 @@ int main()
     {
 
         work[i] = avail[i];
+        
     }
 
     for (int i = 0; i < n; i++)

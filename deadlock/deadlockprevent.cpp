@@ -22,6 +22,7 @@ int main()
 
     vector<int> safe_order;
 
+
     bool safe = true;
 
     for (int i = 0; i < n; i++)
@@ -79,3 +80,4 @@ int main()
 
     return 0;
 }
+
