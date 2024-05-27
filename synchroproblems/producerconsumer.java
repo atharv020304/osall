@@ -1,6 +1,5 @@
-
-package OsJava.sync;
-
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
 class ProducerConsumer {
@@ -8,6 +7,7 @@ class ProducerConsumer {
     static Semaphore mutex = new Semaphore(1);
     static Semaphore full = new Semaphore(0);
     static Semaphore empty = new Semaphore(BUFFER_SIZE);
+    static Queue<Integer> buffer = new LinkedList<>();
 
     static class Producer extends Thread {
         public void run() {
@@ -15,10 +15,10 @@ class ProducerConsumer {
                 try {
                     empty.acquire();
                     mutex.acquire();
+                    buffer.add(i);
                     System.out.println("Producer produced item " + i);
                     mutex.release();
                     full.release();
-                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -32,10 +32,10 @@ class ProducerConsumer {
                 try {
                     full.acquire();
                     mutex.acquire();
-                    System.out.println("Consumer consumed item " + i);
+                    int item = buffer.poll();
+                    System.out.println("Consumer consumed item " + item);
                     mutex.release();
                     empty.release();
-                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -50,6 +50,3 @@ class ProducerConsumer {
         consumer.start();
     }
 }
-
-
-
