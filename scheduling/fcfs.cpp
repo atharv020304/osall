@@ -50,5 +50,9 @@ cout <<"pid"<<"\t"<<"at"<<"\t"<<"bt"<<"\t"<<"ct"<<"\t"<<"tat"<<"\t"<<"wt"<<endl;
 for(int i=0;i<processes.size();i++){
     Process &p = processes[i];
     cout <<p.pid<<"\t"<<p.at<<"\t"<<p.bt<<"\t"<<p.ct<<"\t"<<p.tat<<"\t"<<p.wt<<endl;
+    }
+
+    
 }
-}
+
+

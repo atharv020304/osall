@@ -1,0 +1,475 @@
+
+
+
+
+
+
+
+1.	Convert Decimal to binary & binary to decimal:
+
+
+#tput clear
+echo "Conversion of decimal to Binary and Binary to Decimal"
+echo "1. Convert Decimal to Binary"
+echo "2. Convert Binary to Decimal"
+echo "3. Exit"
+echo "Enter ur choice:"
+read ch
+case $ch in
+1) echo "Enter any decimal no:"
+read num
+rem=1
+bno=" "
+while [ $num -gt 0 ]
+do
+rem=`expr $num % 2 `
+bno=$bno$rem
+num=`expr $num / 2 `
+done
+i=${#bno}
+final=" "
+while [ $i -gt 0 ]
+do
+rev=`echo $bno | awk '{ printf substr( $0,'$i',1 ) }'`
+final=$final$rev
+i=$(( $i - 1 ))
+done
+echo "Equivalent Binary no:" $final ;;
+2) echo "Enter any Binary no;"
+read bino
+len=${#bino}
+i=1
+pow=$((len - 1 ))
+while [ $i -le $len ]
+do
+n=`echo $bino | awk '{ printf substr( $0,'$i',1 )}' `
+j=1
+p=1
+while [ $j -le $pow ]
+do
+p=$(( p * 2 ))
+j=$(( j + 1 ))
+done
+dec=$(( n * p ))
+findec=$(( findec + dec ))
+pow=$((pow - 1 ))
+i=$(( i + 1 ))
+done
+echo "Equivalent Decimal no:"$findec ;;
+3) echo "Enter correctly:" ;;
+esac
+
+
+
+
+
+
+
+
+2.Sort array using any sorting method (Bubble here)
+
+# Sorting the array in Bash 
+# using Bubble sort
+
+# Static input of Array
+arr=(10 8 20 100 12)
+
+echo "Array in original order"
+echo ${arr[*]}
+
+# Performing Bubble sort 
+for ((i = 0; i<5; i++))
+do
+    
+    for((j = 0; j<5-i-1; j++))
+    do
+    
+        if [ ${arr[j]} -gt ${arr[$((j+1))]} ]
+        then
+            # swap
+            temp=${arr[j]}
+            arr[$j]=${arr[$((j+1))]}  
+            arr[$((j+1))]=$temp
+        fi
+    done
+done
+
+echo "Array in sorted order :"
+echo ${arr[*]}
+
+
+
+
+
+
+
+
+3.Prime Number Check
+
+
+#storing the number to be checked 
+echo "Enter no."
+read number
+i=2 
+
+#flag variable 
+f=0 
+
+#running a loop from 2 to number/2 
+while test $i -le `expr $number / 2` 
+do
+
+#checking if i is factor of number 
+if test `expr $number % $i` -eq 0 
+then
+f=1 
+fi
+
+#increment the loop variable 
+i=`expr $i + 1` 
+done
+if test $f -eq 1 
+then
+echo "Not Prime"
+else
+echo "Prime"
+fi
+
+
+
+
+
+4. Reversing a number
+
+
+echo "Enter a number"
+read num
+reverse=0
+ 
+while [ $num -gt 0 ]
+do
+    remainder=$(( $num % 10 )) 
+    reverse=$(( $reverse * 10 + $remainder )) 
+    num=$(( $num / 10 )) 
+done
+ 
+echo "Reversed number is : $reverse"
+
+
+
+
+
+
+5. Save even and odd in different files
+
+#!/bin/bash
+
+# Check if the input file is provided
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 input_file"
+  exit 1
+fi
+
+input_file=$1
+
+# Check if the input file exists
+if [ ! -f "$input_file" ]; then
+  echo "File not found: $input_file"
+  exit 1
+fi
+
+# Clear or create the output files
+> even.txt
+> odd.txt
+
+# Read numbers from the input file
+while IFS= read -r number; do
+  # Check if the number is even or odd
+  if [ $((number % 2)) -eq 0 ]; then
+    echo "$number" >> even.txt
+  else
+    echo "$number" >> odd.txt
+  fi
+done < "$input_file"
+
+echo "Processing complete. Check 'even' and 'odd' files for results."
+
+Running:
+chmod +x evod.sh
+./evod.sh input.txt
+
+
+
+
+
+6. Arithmetic functions
+
+#!/bin/sh
+
+a=10
+b=20
+
+val=`expr $a + $b`
+echo "a + b : $val"
+
+val=`expr $a - $b`
+echo "a - b : $val"
+
+val=`expr $a \* $b`
+echo "a * b : $val"
+
+val=`expr $b / $a`
+echo "b / a : $val"
+
+val=`expr $b % $a`
+echo "b % a : $val"
+
+if [ $a == $b ]
+then
+   echo "a is equal to b"
+fi
+
+if [ $a != $b ]
+then
+   echo "a is not equal to b"
+fi
+
+
+
+
+
+
+
+
+7. String Handling Functions
+
+
+#!/bin/bash
+
+# Function to get the length of a string
+string_length() {
+  local str=$1
+  echo "Length of '$str' is ${#str}"
+}
+
+# Function to extract a substring
+substring() {
+  local str=$1
+  local position=$2
+  local length=$3
+  echo "Substring of '$str' from position $position with length $length is '${str:position:length}'"
+}
+
+# Function to replace a substring
+string_replace() {
+  local str=$1
+  local search=$2
+  local replace=$3
+  echo "String after replacing '$search' with '$replace' in '$str' is '${str//$search/$replace}'"
+}
+
+# Function to convert string to uppercase
+string_uppercase() {
+  local str=$1
+  echo "Uppercase of '$str' is '${str^^}'"
+}
+
+# Function to convert string to lowercase
+string_lowercase() {
+  local str=$1
+  echo "Lowercase of '$str' is '${str,,}'"
+}
+
+# Main script execution
+
+# Sample string
+sample_string="Hello, World!"
+
+# Get the length of the string
+string_length "$sample_string"
+
+# Extract a substring
+substring "$sample_string" 7 5
+
+# Replace a substring
+string_replace "$sample_string" "World" "Bash"
+
+# Convert to uppercase
+string_uppercase "$sample_string"
+
+# Convert to lowercase
+string_lowercase "$sample_string"
+
+
+
+
+
+
+8. Fibonnachi
+
+# Program for Fibonacci
+# Series
+
+# Static input for N
+N=9
+
+# First Number of the
+# Fibonacci Series
+a=0
+
+# Second Number of the
+# Fibonacci Series
+b=1 
+
+echo "The Fibonacci series is : "
+
+for (( i=0; i<N; i++ ))
+do
+	echo -n "$a "
+	fn=$((a + b))
+	a=$b
+	b=$fn
+done
+# End of for loop
+
+
+
+
+
+
+
+9. Palindrome
+
+num=545
+
+# Storing the remainder
+s=0
+
+# Store number in reverse 
+# order
+rev=""
+
+# Store original number 
+# in another variable
+temp=$num
+
+while [ $num -gt 0 ]
+do
+	# Get Remainder
+	s=$(( $num % 10 )) 
+	
+	# Get next digit
+	num=$(( $num / 10 )) 
+	
+	# Store previous number and
+	# current digit in reverse 
+	rev=$( echo ${rev}${s} ) 
+done
+
+if [ $temp -eq $rev ];
+then
+	echo "Number is palindrome"
+else
+	echo "Number is NOT palindrome"
+fi
+
+
+
+
+
+
+
+
+
+10. Even Odd
+
+# HOW TO FIND A NUMBER IS EVEN OR ODD IN SHELL SCRIPT
+clear 
+echo "---- EVEN OR ODD IN SHELL SCRIPT -----";
+echo -n "Enter a number:";
+read n;
+echo -n "RESULT: ";
+if [ `expr $n % 2` == 0 ]
+then
+	echo "$n is even";
+else
+	echo "$n is Odd";
+fi
+
+
+
+
+
+
+
+
+11. Sum of n even numbers cmd line input
+
+#!/bin/bash
+
+# Function to calculate the sum of first n even numbers
+sum_even_numbers() {
+    local n=$1
+    local sum=0
+    local i=1
+
+    while [ $i -le $n ]; do
+        # Calculate the i-th even number
+        local even=$((2 * i))
+        # Add the even number to the sum
+        sum=$((sum + even))
+        # Increment the counter
+        i=$((i + 1))
+    done
+
+    echo "The sum of the first $n even numbers is: $sum"
+}
+
+# Function to get user input if no argument is provided
+get_user_input() {
+    read -p "Please enter the number of even numbers to sum: " n
+    echo $n
+}
+
+# Check if a number is provided as an argument, if not, prompt the user
+if [ -z "$1" ]; then
+    n=$(get_user_input)
+else
+    n=$1
+fi
+
+# Validate that the input is a positive integer
+if ! [[ "$n" =~ ^[0-9]+$ ]]; then
+    echo "Error: Please enter a valid positive integer."
+    exit 1
+fi
+
+# Call the function with the provided or entered argument
+sum_even_numbers $n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

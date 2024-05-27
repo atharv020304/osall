@@ -19,6 +19,7 @@ void *reader(void* param)
     usleep(3);
     sem_wait(&x);
     readercount--;
+    
     if(readercount==0)
     {
         sem_post(&y);
